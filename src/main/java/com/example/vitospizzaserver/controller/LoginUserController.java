@@ -29,9 +29,9 @@ public class LoginUserController {
 		Boolean status = userService.validateLoginUser(signinUser);
 		
 		if (status) {
-			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successfully Signin", "Successfully Signin"), HttpStatus.OK);
+			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successful", "Successful"), HttpStatus.OK);
 		} else {
-			return new ResponseEntity<StandardResponse>(new StandardResponse(400,"Unsuccessfully Signin", "Unsuccessfully Signin"), HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<StandardResponse>(new StandardResponse(400,"Unsuccessful", "Unsuccessful"), HttpStatus.BAD_REQUEST);
 		}
 	}
 

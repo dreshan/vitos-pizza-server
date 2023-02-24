@@ -16,7 +16,7 @@ import com.example.vitospizzaserver.utility.StandardResponse;
 
 @RestController
 @RequestMapping("vitospizzaserver")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class UnregisteredCartController {
 	
 	@Autowired
@@ -25,6 +25,6 @@ public class UnregisteredCartController {
 	@PostMapping("/processUnregisteredCart")
 	public ResponseEntity<StandardResponse> processUnregisteredCart(@RequestBody UnregisteredCart unregisteredCartCart) {
 		unregisteredCartService.processUnregistedCart(unregisteredCartCart);
-		return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successfully Loaded", "Successfully Loaded"), HttpStatus.OK);
+		return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successful", "Successful"), HttpStatus.OK);
 	}
 }
