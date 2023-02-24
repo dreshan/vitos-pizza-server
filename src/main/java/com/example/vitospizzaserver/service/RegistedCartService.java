@@ -1,5 +1,7 @@
 package com.example.vitospizzaserver.service;
 
+import java.util.Calendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,8 @@ public class RegistedCartService {
 			cart.setQuantity(registedCart.getQuantity());
 			cart.setUserId(loginUser.getUserName());
 			cart.setCartType(REGISTED_USER);
+			cart.setOrderDate(Calendar.getInstance().getTime());
+			
 			
 			cartDao.save(cart);
 			return true;

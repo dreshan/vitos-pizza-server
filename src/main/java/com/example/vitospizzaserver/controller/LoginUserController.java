@@ -28,7 +28,6 @@ public class LoginUserController {
 		
 		Boolean status = userService.validateLoginUser(signinUser);
 		
-		System.out.println("status :::::::"+status);
 		if (status) {
 			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successfully Signin", "Successfully Signin"), HttpStatus.OK);
 		} else {

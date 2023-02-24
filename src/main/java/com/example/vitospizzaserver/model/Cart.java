@@ -1,5 +1,7 @@
 package com.example.vitospizzaserver.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -73,10 +75,10 @@ public class Cart {
 	public void setCartType(String cartType) {
 		this.cartType = cartType;
 	}
-	public String getOrderDate() {
+	public Date getOrderDate() {
 		return orderDate;
 	}
-	public void setOrderDate(String orderDate) {
+	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
 }

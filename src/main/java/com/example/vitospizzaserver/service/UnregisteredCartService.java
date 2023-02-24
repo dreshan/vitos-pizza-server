@@ -48,8 +48,8 @@ public class UnregisteredCartService {
 			unregisteredUser = new UnregisteredUser();
 			unregisteredUser.setAddress(unregisteredCart.getAddress());
 			unregisteredUser.setEmail(unregisteredCart.getEmail());
-			unregisteredUser.setFirstname(unregisteredCart.getFirstname());
-			unregisteredUser.setLastname(unregisteredCart.getLastname());
+			unregisteredUser.setFirstName(unregisteredCart.getFirstname());
+			unregisteredUser.setLastName(unregisteredCart.getLastname());
 			unregisteredUser.setPhone(unregisteredCart.getPhone());
 			unregisteredUserDao.save(unregisteredUser);
 		}
