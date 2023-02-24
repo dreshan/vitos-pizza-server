@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.vitospizzaserver.model.UnregisteredCart;
+import com.example.vitospizzaserver.dto.UnregisteredCart;
 import com.example.vitospizzaserver.service.UnregisteredCartService;
 import com.example.vitospizzaserver.utility.StandardResponse;
 

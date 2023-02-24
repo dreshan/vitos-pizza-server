@@ -22,16 +22,19 @@ public class Cart {
 	private String pizzaName;
 	
 	@Column(name = "quantity")
-    private Double quantity;
+    private Long quantity;
 	
 	@Column(name = "amount")
     private Double amount;
 	
 	@Column(name = "user_id")
-	private Long userId;
+	private String userId;
 	
 	@Column(name = "cart_type")
 	private String cartType;
+	
+	@Column(name = "order_date")
+	private Date orderDate;
     
     
 	public Long getCartId() {
@@ -40,7 +43,7 @@ public class Cart {
 	public String getPizzaName() {
 		return pizzaName;
 	}
-	public Double getQuantity() {
+	public Long getQuantity() {
 		return quantity;
 	}
 	public Double getAmount() {
@@ -52,22 +55,28 @@ public class Cart {
 	public void setPizzaName(String pizzaName) {
 		this.pizzaName = pizzaName;
 	}
-	public void setQuantity(Double quantity) {
+	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}
 	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
-	public Long getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 	public String getCartType() {
 		return cartType;
 	}
-	public void setUserId(Long userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 	public void setCartType(String cartType) {
 		this.cartType = cartType;
+	}
+	public String getOrderDate() {
+		return orderDate;
+	}
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
 	}
 }

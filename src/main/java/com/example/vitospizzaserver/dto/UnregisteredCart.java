@@ -8,7 +8,7 @@ public class UnregisteredCart {
     private String email;
     private String phone;
     private String pizzaName;
-    private Double quantity;
+    private Long quantity;
     private Double amount;
     
     
@@ -31,7 +31,7 @@ public class UnregisteredCart {
 	public String getPizzaName() {
 		return pizzaName;
 	}
-	public Double getQuantity() {
+	public Long getQuantity() {
 		return quantity;
 	}
 	public Double getAmount() {
@@ -55,7 +55,7 @@ public class UnregisteredCart {
 	public void setPizzaName(String pizzaName) {
 		this.pizzaName = pizzaName;
 	}
-	public void setQuantity(Double quantity) {
+	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}
 	public void setAmount(Double amount) {
