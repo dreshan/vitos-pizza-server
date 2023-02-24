@@ -9,30 +9,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.vitospizzaserver.dto.SigninUser;
-import com.example.vitospizzaserver.service.UserService;
+import com.example.vitospizzaserver.dto.RegistedCart;
+import com.example.vitospizzaserver.service.RegistedCartService;
 import com.example.vitospizzaserver.utility.StandardResponse;
 
 @RestController
 @RequestMapping("vitospizzaserver")
 @CrossOrigin
-public class LoginUserController {
+public class RegistedCartController {
 	
 	@Autowired
-	private UserService userService;
-	
-	@PostMapping("/loginUserService")
-	public ResponseEntity<StandardResponse> loginUserService(@RequestBody SigninUser signinUser) {
+	private RegistedCartService registedCartService;
+
+	@PostMapping("/registedUserwithOrder")
+	public ResponseEntity<StandardResponse> saveRegistedUserwithOrder(@RequestBody RegistedCart registedCart) {
 		
-		System.out.println("signin user details  ::: "+signinUser.getUsername());
-		
-		Boolean status = userService.validateLoginUser(signinUser);
+		Boolean status = registedCartService.saveRegistedCart(registedCart);
 		
 		if (status) {
 			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successful", "Successful"), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<StandardResponse>(new StandardResponse(400,"Unsuccessful", "Unsuccessful"), HttpStatus.BAD_REQUEST);
 		}
+		
 	}
-
 }
