@@ -27,9 +27,9 @@ public class SignUpUserController {
 		Boolean status = userService.saveSignupUser(signupUser);
 		
 		if (status) {
-			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successfully Signup", "Successfully Signup"), HttpStatus.OK);
+			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successful", "Successful"), HttpStatus.OK);
 		} else {
-			return new ResponseEntity<StandardResponse>(new StandardResponse(400,"Unsuccessfully Signup", "Unsuccessfully Signup"), HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<StandardResponse>(new StandardResponse(400,"Unsuccessful", "Unsuccessful"), HttpStatus.BAD_REQUEST);
 		}
 	}
 	
@@ -38,9 +38,9 @@ public class SignUpUserController {
 		Boolean status = false;
 		System.out.println("checkUsernameAvailability ::: "+username);
 		if (status) {
-			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successfully Signup", "Successfully Signup"), HttpStatus.OK);
+			return new ResponseEntity<StandardResponse>(new StandardResponse(200,"Successful", "Successful"), HttpStatus.OK);
 		} else {
-			return new ResponseEntity<StandardResponse>(new StandardResponse(400,"Unsuccessfully Signup", "Unsuccessfully Signup"), HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<StandardResponse>(new StandardResponse(400,"Unsuccessful", "Unsuccessful"), HttpStatus.BAD_REQUEST);
 		}
 	}
 }
